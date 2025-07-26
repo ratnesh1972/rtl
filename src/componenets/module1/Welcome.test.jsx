@@ -8,3 +8,10 @@ test('renders Welcome component with correct greeting', () => {
     const welcomeEle = screen.getByText(/Hello, Ratnesh/i)
     expect(welcomeEle).toBeInTheDocument()
 })
+
+test('renders Welcome component with correct greeting with debug', () => {
+    render(<Welcome name='Ratnesh' />)
+    screen.debug()
+    const welcomeEle = screen.getByText(/Hello, Ratnesh/i)
+    expect(welcomeEle).toBeInTheDocument()
+})
