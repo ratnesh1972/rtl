@@ -30,8 +30,8 @@
     - queryAll - returns array of matching elements, returns [] if no match
     - findAll - returns array of matching elements, throws error if no match, async.
 
-#### Queries
-- getByRole - query elements by their aria role ex, `button`, `heading`, `textbox` etc. Most preffered way to query the elements.
+#### Queries - Priority
+- getByRole - query elements by their aria role ex, `button`, `heading`, `textbox` etc. Most preffered way to query the elements. List of roles - https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Guides/Techniques#roles
 - getByLabelText - query `form` elements based on their `label` text
 - getByPlaceholderText - query form `input` elements based on their placeholder text
 - getByText - query elements that display text content
