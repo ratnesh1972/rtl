@@ -48,3 +48,16 @@
     - `type`
     - `clear`
     - `upload`
+
+## 4. Asynchronous Testing
+### Async Utilities
+- required for handling data fetching, timeouts or other async operations
+- `find*` - automatically waits for elements to appear
+- `waitFor` - can be used to wait for certain conditions to be met
+- `waitForElementToBeRemoved` - waits for element(s) to be removed
+
+### Mocking Async Ops
+- `jest.fn()` - creating mock functions
+- `mockResolvedValue()` , `mockRejectedValue()` - mocking promises
+- `jest.spyOn()` - spying on existing functions / methods
+- Mocking API calls (using `msw` mock service worker for more realistic network mocking)
