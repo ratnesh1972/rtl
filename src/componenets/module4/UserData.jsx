@@ -40,7 +40,7 @@ const UserData = ({ userId }) => {
         <div>
             <h2>User Profile</h2>
             <p>Name: {user.name}</p>
-            <p>Email: {user.profile}</p>
+            <p>Email: {user.email}</p>
         </div>
     )
 }
