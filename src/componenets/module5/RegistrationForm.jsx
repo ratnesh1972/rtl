@@ -78,7 +78,7 @@ const RegistrationForm = () => {
                 value={isAgreed}
                 onChange={(e) => setIsAgreed(e.target.value)}
             />
-            {errors.isAgreed && <span className="error">{errors.agreement}</span>}
+            {errors.agreement && <span className="error">{errors.agreement}</span>}
             <button type="submit">Register</button>
             {submitted && <p data-testid="success-message">Registration successful!</p>}
         </form>
