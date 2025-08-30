@@ -61,3 +61,8 @@
 - `mockResolvedValue()` , `mockRejectedValue()` - mocking promises
 - `jest.spyOn()` - spying on existing functions / methods
 - Mocking API calls (using `msw` mock service worker for more realistic network mocking)
+
+## 5. Advanced Testing Scenarios
+### Testing forms and input elements
+- Handling multiple inputs, select boxes, checkboxes, radio buttons.
+- Form submission logic.
