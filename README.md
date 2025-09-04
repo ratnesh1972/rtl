@@ -66,3 +66,7 @@
 ### Testing forms and input elements
 - Handling multiple inputs, select boxes, checkboxes, radio buttons.
 - Form submission logic.
+
+### Testing components with context API
+- How to provide context to components being tested.
+- Using custom render function
