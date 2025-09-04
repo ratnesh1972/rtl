@@ -1,3 +1,18 @@
-import { createContext } from "react";
+import React, { createContext, useContext, useState } from 'react'
 
-export const ThemeContext = createContext()
+const ThemeContext = createContext()
+
+export const ThemeProvider = ({ children }) => {
+    const [theme, settheme] = useState('light')
+
+    const toggleTheme = () => {
+        settheme((prevTheme) => (prevTheme == 'light' ? 'dark' : 'light'))
+    }
+
+    < ThemeContext.Provider value={{ theme, toggleTheme }}>
+        {children}
+    </ThemeContext.Provider>
+}
+
+// eslint-disable-next-line react-refresh/only-export-components
+export const useTheme = () => useContext(ThemeContext)

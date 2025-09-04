@@ -1,10 +1,7 @@
-import React, { useContext } from 'react'
-import { ThemeProvider, ThemeC } from './ThemeProvider'
-import { ThemeContext } from './ThemeContext'
+import { useTheme } from './ThemeContext'
 
 const ThemeSwitcher = () => {
-    const { theme, toggleTheme } = useContext(ThemeContext)
-
+    const { theme, toggleTheme } = useTheme()
     return (
         <div>
             <div style={{ background: theme === 'light' ? '#fff' : '#333', color: theme === 'light' ? '#000' : '#fff', padding: '20px' }}>
