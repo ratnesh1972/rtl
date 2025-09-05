@@ -1,6 +1,7 @@
-import React, { createContext, useContext, useState } from 'react'
+import React, { createContext, useState } from 'react'
 
-const ThemeContext = createContext()
+// eslint-disable-next-line react-refresh/only-export-components
+export const ThemeContext = createContext()
 
 export const ThemeProvider = ({ children }) => {
     const [theme, settheme] = useState('light')
@@ -9,10 +10,10 @@ export const ThemeProvider = ({ children }) => {
         settheme((prevTheme) => (prevTheme == 'light' ? 'dark' : 'light'))
     }
 
-    < ThemeContext.Provider value={{ theme, toggleTheme }}>
-        {children}
-    </ThemeContext.Provider>
+    return (
+        < ThemeContext.Provider value={{ theme, toggleTheme }}>
+            {children}
+        </ThemeContext.Provider>
+    )
 }
 
-// eslint-disable-next-line react-refresh/only-export-components
-export const useTheme = () => useContext(ThemeContext)
